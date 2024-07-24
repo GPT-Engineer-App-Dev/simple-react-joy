@@ -38,7 +38,7 @@ export default function Index() {
             onChange={(e) => setNewNote(e.target.value)}
             onKeyPress={handleKeyPress}
             placeholder="Enter a new note"
-            className="flex-grow mr-2 border-pink-300 focus:border-pink-500 focus:ring-pink-500"
+            className="flex-grow mr-2 focus:border-pink-500 focus:ring-pink-500"
           />
           <Button onClick={addNote} className="bg-pink-500 hover:bg-pink-600 text-white">
             Add Note
