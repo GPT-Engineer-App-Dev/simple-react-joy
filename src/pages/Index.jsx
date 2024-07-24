@@ -15,6 +15,12 @@ export default function Index() {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      addNote();
+    }
+  };
+
   const deleteNote = (index) => {
     const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
@@ -30,6 +36,7 @@ export default function Index() {
             type="text"
             value={newNote}
             onChange={(e) => setNewNote(e.target.value)}
+            onKeyPress={handleKeyPress}
             placeholder="Enter a new note"
             className="flex-grow mr-2"
           />
